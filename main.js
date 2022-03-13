@@ -45,7 +45,6 @@ class PanacekTrida {
 
 
 	posunVpravo() {
-		// TODO zkusit opravit posuvník :/
 		if (this.x < window.innerWidth) {
 			this.x = this.x + this.panacekHTML.naturalWidth;
 			if (this.x > window.innerWidth) {
@@ -114,6 +113,7 @@ function prunik(panacek, mince) {
 			scoreHTML.textContent = score;
 			console.log("Fanfara" + score);
 			prehraj(fanfara);
+			confirm("Vyhrál jsi!");
 		} else {
 			score++;
 			scoreHTML.textContent = score;
@@ -157,6 +157,7 @@ window.addEventListener('keydown', (e) => {
 	prehraj(hudba);
 	prunik(mujPanacek, mojeMince)
 });
+
 
 
 
